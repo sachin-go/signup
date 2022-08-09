@@ -1,0 +1,50 @@
+<div class="container-fluid">
+    <div class="row mt-5">
+        <div class="col"></div>
+        <div class="col-4">
+            <div class="card shadow">
+                <div class="card-body">
+                    <form [formGroup]="loginForm">
+                        <div class="mb-3">
+                            <h3 class="text-dark text-muted">Login</h3>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="text" id="email" formControlName="email" placeholder="awesome@user.com"
+                                class="form-control pl-4 py-4">
+                            <!-- <div *ngIf="!loginForm.get('email').valid && loginForm.get('email').touched"
+                                class="alert alert-danger pl-4 py-1 mt-2 rounded-pill" role="alert">
+                                Please Enter Email...!
+                            </div> -->
+                        </div>
+                        <div class="form-group mt-4">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" formControlName="password" placeholder="Enter password"
+                                class="form-control pl-4 py-4">
+                            <!-- <div *ngIf="!loginForm.get('password').valid && loginForm.get('password').touched"
+                                role="alert">
+                                <p class="alert alert-danger pl-4 py-1 mt-2 rounded-pill">Please Enter Password</p>
+                            </div> -->
+                        </div>
+                        <button type="button" class="btn btn-info" (click)="login()">Login</button>
+                        <!-- <div class="row">
+                            <div class="col-md-6">
+                                <a href="/auth/signup" style="text-decoration: none;">Need Account ? <span class="text-danger">Register</span></a>
+                            </div>
+                        </div> -->
+                        <!-- <div class="row mt-2">
+                           <a href="" style="text-decoration: none; cursor: pointer;" (click)="signInWithGoogle()">
+                            <div class="card shadow text-center">
+                                <div class="card-body">
+                                    <img src="https://blog.hubspot.com/hubfs/image8-2.jpg" height="24px" alt="">
+                                </div>
+                            </div>
+                           </a>
+                        </div> -->
+                      </form>
+                </div>
+            </div>
+        </div>
+        <div class="col"></div>
+    </div>
+</div>

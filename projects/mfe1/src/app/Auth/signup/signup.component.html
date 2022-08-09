@@ -1,0 +1,38 @@
+<div class="container-fluid">
+    <div class="row mt-5">
+        <div class="col"></div>
+        <div class="col-4">
+            <div class="card shadow">
+                <div class="card-body">
+                    <form [formGroup]="signupform">
+                        <div class="mb-3">
+                            <h3 class="text-dark text-muted">Register</h3>
+                        </div>
+                        <div class="form-group mb-3">
+                            <input type="email" formControlName="email" required placeholder="awesome@user.com"
+                                class="form-control pl-4 py-3">
+                            <!-- <div *ngIf="!signupform.get('email').valid && signupform.get('email').touched"
+                                class="alert alert-danger pl-3 py-1 mt-2 rounded-pill" role="alert">
+                                Please Enter Email...!
+                            </div> -->
+                        </div>
+                        <div class="form-group mb-3">
+                            <input type="password" role="" formControlName="password" placeholder="Enter password"
+                                class="form-control  pl-4 py-2">
+                            <!-- <div *ngIf="!signUpForm.get('password').valid && signUpForm.get('password').touched" role="alert">
+                                <p class="alert alert-danger pl-4 mt-2 rounded-pill">Please Enter Password</p>
+                            </div> -->
+                        </div>
+                        <button type="button" class="btn btn-info" (click)="register()">Register</button>
+                        <!-- <div class="row">
+                            <div class="col-md-6">
+                                <a href="/login" style="text-decoration: none;">Have an account ? <span class="text-danger">Login</span></a>
+                            </div>
+                        </div> -->
+                      </form>
+                </div>
+            </div>
+        </div>
+        <div class="col"></div>
+    </div>
+</div>
