@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -9,7 +10,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class SignupComponent implements OnInit {
   signupform : FormGroup
-  constructor(private http : HttpClient) { }
+  constructor(private http : HttpClient, private router : Router) { }
 
   ngOnInit(): void {
     this.signupform = new FormGroup({
@@ -36,6 +37,7 @@ export class SignupComponent implements OnInit {
     // this.auth.register(this.email,this.password);
     this.http.post("https://signuppoc-b0b0d-default-rtdb.firebaseio.com/registration.json", this.signupform.value).subscribe();
       this.signupform.reset()
+      this.router.navigate(['/auth/login'])
   }
 
 }
