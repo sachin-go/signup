@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +11,7 @@ import { map } from 'rxjs/operators'
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private http : HttpClient) { }
+  constructor(private http : HttpClient, private router : Router) { }
   loginForm : FormGroup
   email : string = '';
   password : string = '';
@@ -35,7 +36,7 @@ export class LoginComponent implements OnInit {
           
           alert("login successfull")
           this.loginForm.reset()
-          // this.router.navigate(["admin"])
+          this.router.navigate(["dashboard"])
         }
       })})
   }
