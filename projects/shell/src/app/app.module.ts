@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { APP_ROUTES } from './app.routes';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { HttpClientModule } from '@angular/common/http';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   imports: [
@@ -16,7 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
   declarations: [
     AppComponent,
     HomeComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    DashboardComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
